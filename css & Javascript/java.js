@@ -32,3 +32,21 @@ heartIcons.forEach(heartIcon => {
         }
     });
 });
+
+// DOM Manipulation
+const section = document.getElementById('trending');
+
+window.addEventListener('scroll', function() {
+  const scrollPosition = window.scrollY;
+
+  // Change the background color of the section to pink when scrolling
+  if (scrollPosition > 0) {
+    section.style.backgroundColor = '#F0E2E1';
+  } else {
+    section.style.backgroundColor = 'white';
+  }
+});
+  
+  
+  
+  

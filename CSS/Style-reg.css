@@ -12,7 +12,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(Image/login/bg-login.png) no-repeat;
+    background: url(../Image/login/bg-login.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -64,28 +64,6 @@ body{
     top: 50%;
     transform: translateY(-50%);
     font-size: 20px;
-}
-
-.wrapper .remember-forgot {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    margin: -15px 0 15px;
-}
-
-.remember-forgot label input {
-    accent-color: white;
-    margin-right: 3px;
-}
-
-.remember-forgot a {
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-}
-.remember-forgot a:hover {
-    text-decoration: underline;
-    font-weight: bolder;
 }
 
 .wrapper .btn {

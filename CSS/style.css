@@ -161,7 +161,6 @@ section{
     transition: all .40s;
 }
 .row img{
-    margin-top: 10px;
     width: 200px;
     height: auto;
     transition: all .40s;

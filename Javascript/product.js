@@ -51,15 +51,17 @@ const products = [
 
 document.addEventListener("DOMContentLoaded", ()=>{
   console.log("Load Page")
-  let row = document.getElementById("row");
+  let parent= document.getElementById("parent-product");
     products.forEach((product, index)=>{
       let div = document.createElement("div");
-      div.setAttribute("id", `${product.id}`);
+      div.setAttribute("class","row");
+      div.setAttribute("id",`productindex, ${index}`);
       let img = document.createElement("img");
-      img.setAttribute("class", "b");
-      img.setAttribute("alt", "");
       img.setAttribute("src", `${product.itemSrc}`);
       div.appendChild(img);
+      let productText = document.createElement("div");
+      productText.setAttribute("class","product-text");
+      let h5 = document.createElement("h5");
       let imageDesc = document.createElement("div");
       imageDesc.setAttribute("class", "img-desc");
       let gambarLink = document.createElement("a");

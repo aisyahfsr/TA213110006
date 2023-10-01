@@ -133,5 +133,5 @@ function redirectToCheckout() {
     }
 ];
   localStorage.setItem('productData', JSON.stringify(productData));
-  window.location.href = 'Layout Checkout.html';
+  window.location.href = 'https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-jayapura-group-5/Layout%20Checkout.HTML';
 }

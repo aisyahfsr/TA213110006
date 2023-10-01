@@ -123,7 +123,7 @@ productData.forEach(product => {
         <div class="price">
             <h4>${product.name}</h4>
             <p>${product.price}</p>
-            <button class="btn-co"><a href="Layout Checkout.Html">Buy</a></button>
+            <button class="btn-co"><a href="/front-end-capstone-project-section-jayapura-group-5/Layout Checkout.Html">Buy</a></button>
         </div>
     `;
 

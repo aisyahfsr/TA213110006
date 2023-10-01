@@ -55,7 +55,7 @@ const productData = [
     },
     {
       id: "product10",
-      itemSrc: "./Image/Shoes/S10.jpegg",
+      itemSrc: "./Image/Shoes/S10.jpeg",
       name: "Candy Sneakers",
       price: "Rp 340.000"
     },

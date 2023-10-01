@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <div class="wrapper">
-        <form action="">
+    <div class="wrapper" id="checkoutContainer">
+        <form action="" id="checkoutForm">
             <h1>Checkout</h1>
             <div class="input-box">
                 <label for="Product">Product:</label>
-                <input type="text" name="Product" placeholder="Product" required>
+                <input type="text" name="Product" placeholder="Product" id="productName" required>
             </div>
             <div class="input-box">
                 <label for="Price">Price:</label>
-                <input type="text" name="Price" placeholder="Price" required>
+                <input type="text" name="Price" placeholder="Price" id="productPrice" required>
             </div>
             <div class="input-box">
                 <label for="Name">Fill your Name:</label>
@@ -56,5 +56,21 @@
         </form>
     </div>
     
+    <script>
+        // Retrieve product data from local storage
+        const productData = JSON.parse(localStorage.getItem('productData'));
+
+        // Populate product name and price in the form
+        document.getElementById('productName').value = productData.name;
+        document.getElementById('productPrice').value = productData.price;
+
+        // Handle form submission
+        const checkoutForm = document.getElementById('checkoutForm');
+        checkoutForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Handle form submission, e.g., send data to a server
+            console.log('Form submitted:', productData);
+        });
+    </script>
 </body>
 </html>

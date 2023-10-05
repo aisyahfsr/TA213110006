@@ -63,7 +63,7 @@
     <script>
         // Retrieve product data from local storage
         const productData = JSON.parse(localStorage.getItem('productData'));
-
+        console.log(`product Data ${productData}`);
         // Populate product name and price in the form
         document.getElementById('productName').value = productData.name;
         document.getElementById('productPrice').value = productData.price;

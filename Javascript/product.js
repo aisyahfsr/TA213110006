@@ -78,7 +78,7 @@ productData.forEach(product => {
         </div>
     `;
 
-//API untuk memanggil nama dan price
+//API untuk memanggil nama dan price di Form CO
     parentProduct.appendChild(productCard);
 });
 

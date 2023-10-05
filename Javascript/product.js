@@ -74,14 +74,18 @@ productData.forEach(product => {
         <div class="price">
             <h4>${product.name}</h4>
             <p>${product.price}</p>
-            <button class="btn-co" onclick="redirectToCheckout()">Buy</button>
+            <button class="btn-co" onclick="redirectToCheckout('${product.id}')">Buy</button>
         </div>
     `;
 
+//API untuk memanggil nama dan price
     parentProduct.appendChild(productCard);
 });
 
-function redirectToCheckout() {
+function redirectToCheckout(productId) {
+  console.log("redirect to checkout");
+  console.log(productId);
+
   const productData = [
     {
       id: "product1",
@@ -132,6 +136,8 @@ function redirectToCheckout() {
       price: "Rp 150.000"
     }
 ];
-  localStorage.setItem('productData', JSON.stringify(productData));
-  window.location.href = 'https://kampus-merdeka-software-engineering.github.io/FE-Jayapura-5/Layout%20Checkout.HTML';
+   const product =productData.filter(product => product.id === productId);
+  console.log("redirect to checkout");
+  localStorage.setItem('productData', JSON.stringify(product[0]));
+  window.location.href = 'Layout%20Checkout.HTML';
 }

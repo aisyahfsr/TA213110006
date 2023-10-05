@@ -26,7 +26,7 @@
             </div>
             <div class="input-box">
                 <label for="Name">Fill your Name:</label>
-                <input type="text" name="Nama" placeholder="Name" required>
+                <input type="text" name="Name" placeholder="Name" required>
             </div>
             <div class="input-box">
                 <label for="Address">Fill your Address:</label>
@@ -63,6 +63,7 @@
     <script>
         // Retrieve product data from local storage
         const productData = JSON.parse(localStorage.getItem('productData'));
+        console.log(`product Data ${productData}`);
 
         // Populate product name and price in the form
         document.getElementById('productName').value = productData.name;
@@ -76,5 +77,6 @@
             console.log('Form submitted:', productData);
         });
     </script>
+    <script src="./Javascript/Api_checkout.js"></script>
 </body>
 </html>

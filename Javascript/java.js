@@ -12,27 +12,6 @@ menu.onclick = () => {
     navmenu.classList.toggle('open');
 }
 
-// Select all heart icons
-const heartIcons = document.querySelectorAll('.heart-icon i');
-
-// Add a click event listener to each heart icon
-heartIcons.forEach(heartIcon => {
-    heartIcon.addEventListener('click', function() {
-        const isFavorite = this.getAttribute('data-favorite') === 'true';
-
-        // Toggle the favorite state
-        if (isFavorite) {
-            this.setAttribute('data-favorite', 'false');
-            this.classList.remove('fas'); // Remove filled heart
-            this.classList.add('far');    // Add empty heart
-        } else {
-            this.setAttribute('data-favorite', 'true');
-            this.classList.remove('far');    // Remove empty heart
-            this.classList.add('fas');       // Add filled heart
-        }
-    });
-});
-
 // DOM Manipulation
 const section = document.getElementById('trending');
 

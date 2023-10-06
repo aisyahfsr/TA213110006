@@ -86,56 +86,6 @@ function redirectToCheckout(productId) {
   console.log("redirect to checkout");
   console.log(productId);
 
-  const productData = [
-    {
-      id: "product1",
-      itemSrc: "./Image/Home/Product1.jpeg",
-      name: "Flame Fur Cardigan",
-      price: "Rp 270.000"
-    },
-    {
-      id: "product2",
-      itemSrc: "./Image/Home/Product2.jpeg",
-      name: "Black Tartan Shirt",
-      price: "Rp 200.000"
-    },
-    {
-      id: "product3",
-      itemSrc: "./Image/Home/Product3.jpeg",
-      name: "Milky Leather Jacket",
-      price: "Rp 400.000"
-    },
-    {
-      id: "product4",
-      itemSrc: "./Image/Home/Product4.jpeg",
-      name: "Milky sport set",
-      price: "Rp 300.000"
-    },
-    {
-      id: "product5",
-      itemSrc: "./Image/Home/Product5.jpeg",
-      name: "A-line black skirt",
-      price: "Rp 175.000"
-    },
-    {
-      id: "product6",
-      itemSrc: "./Image/Home/Product6.jpeg",
-      name: "BlueSky Graphic SwetShirt",
-      price: "Rp 150.000"
-    },
-    {
-      id: "product7",
-      itemSrc: "./Image/Home/Product7.jpeg",
-      name: "Lime Green Oversized Shirt",
-      price: "Rp 180.000"
-    },
-    {
-      id: "product8",
-      itemSrc: "./Image/Home/product8.jpeg",
-      name: "A-Line White Midi Skirt",
-      price: "Rp 150.000"
-    }
-];
   const product =productData.filter(product => product.id === productId);
   console.log("redirect to checkout");
   localStorage.setItem('productData', JSON.stringify(product[0]));

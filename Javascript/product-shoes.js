@@ -123,9 +123,20 @@ productData.forEach(product => {
         <div class="price">
             <h4>${product.name}</h4>
             <p>${product.price}</p>
-            <button class="btn-co"><a href="https://kampus-merdeka-software-engineering.github.io/FE-Jayapura-5/Layout%20Checkout.HTML">Buy</a></button>
+            <button class="btn-co" onclick="redirectToCheckout('${product.id}')">Buy</button>
         </div>
     `;
 
     parentProduct.appendChild(productCard);
 });
+
+//API untuk memanggil nama dan price di Form CO
+function redirectToCheckout(productId) {
+  console.log("redirect to checkout");
+  console.log(productId);
+
+  const product =productData.filter(product => product.id === productId);
+  console.log("redirect to checkout");
+  localStorage.setItem('productData', JSON.stringify(product[0]));
+  window.location.href = 'Layout%20Checkout.HTML';
+}

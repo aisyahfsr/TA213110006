@@ -1,0 +1,40 @@
+// Post data dari checkout form
+function postRegFormData(event) {
+    event.preventDefault();
+
+    // Ambil data dari form
+    const form = event.target;
+    const username = form.querySelector('[name="username"]').value;
+    const email = form.querySelector('[name="email"]').value;
+    const password  = form.querySelector('[name="password"]').value;
+    
+    // Buat objek data
+    const data = {
+        user_name: username,
+        email: email,
+        password: password
+    };
+
+    // Kirim data sebagai JSON
+    fetch('localhost:5001/checkout', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert('Proses Registrasi Telah Berhasil.');
+            form.reset();
+        } else {
+            alert('Maaf, terjadi kesalahan. Silakan coba lagi.');
+        }
+    })
+    .catch(error => console.error('Error sending Registrasi data:', error));
+}
+
+
+// Event listener untuk form submission
+document.querySelector('.registrasiForm form').addEventListener('submit', postRegFormData);

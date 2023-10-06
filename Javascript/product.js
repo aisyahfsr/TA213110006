@@ -78,10 +78,10 @@ productData.forEach(product => {
         </div>
     `;
 
-//API untuk memanggil nama dan price di Form CO
     parentProduct.appendChild(productCard);
 });
 
+//API untuk memanggil nama dan price di Form CO
 function redirectToCheckout(productId) {
   console.log("redirect to checkout");
   console.log(productId);
@@ -136,7 +136,7 @@ function redirectToCheckout(productId) {
       price: "Rp 150.000"
     }
 ];
-   const product =productData.filter(product => product.id === productId);
+  const product =productData.filter(product => product.id === productId);
   console.log("redirect to checkout");
   localStorage.setItem('productData', JSON.stringify(product[0]));
   window.location.href = 'Layout%20Checkout.HTML';

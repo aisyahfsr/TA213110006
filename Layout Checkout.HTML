@@ -59,23 +59,35 @@
             <button type="submit" class="btn">Checkout</button>
         </form>
     </div>
-    
+
     <script>
-        // Retrieve product data from local storage
-        const productData = JSON.parse(localStorage.getItem('productData'));
-        console.log(`product Data ${productData}`);
+        (function () {
+            const ls = localStorage.getItem('user')
+            if (ls === null) {
+                if (confirm('Anda belum login!')) {
+                    window.location.replace("Layout Login.html")
+                }
+            }
+            const data = JSON.parse(ls)
+            // var nama = document.getElementById("nama").innerHTML = "Halo, " + data.username
+            // var saldo = document.getElementById("saldo").innerHTML = "Saldo anda: " + data.balance
 
-        // Populate product name and price in the form
-        document.getElementById('productName').value = productData.name;
-        document.getElementById('productPrice').value = productData.price;
+            // Retrieve product data from local storage
+            const productData = JSON.parse(localStorage.getItem('productData'));
+            console.log(`product Data ${productData}`);
 
-        // Handle form submission
-        const checkoutForm = document.getElementById('checkoutForm');
-        checkoutForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            // Handle form submission, e.g., send data to server
-            console.log('Form submitted:', productData);
-        });
+            // Populate product name and price in the form
+            document.getElementById('productName').value = productData.name;
+            document.getElementById('productPrice').value = productData.price;
+
+            // Handle form submission
+            const checkoutForm = document.getElementById('checkoutForm');
+            checkoutForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                // Handle form submission, e.g., send data to server
+                console.log('Form submitted:', productData);
+            });
+        })();
     </script>
     <script src="./Javascript/Api_checkout.js"></script>
 </body>

@@ -1,4 +1,4 @@
-// Post data dari checkout form
+// Post data dari Login form
 function postRegFormData(event) {
     event.preventDefault();
 

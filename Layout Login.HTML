@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <link rel="stylesheet" href="./CSS/Style-log.css">
+    <link rel="stylesheet" href="./css/Style-log.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -36,45 +36,7 @@
         </form>
     </div>
 
-    <script>
-        function postRegFormData(event) {
-            event.preventDefault();
-
-            // Ambil data dari form
-            const form = event.target;
-            const username = form.querySelector('[name="username"]').value;
-            const password = form.querySelector('[name="password"]').value;
-
-            // Buat objek data
-            const data = {
-                user_name: username,
-                password: password
-            }
-
-            fetch("http://localhost:5001/login", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(data),
-                })
-                .then(function (response) {
-                    if (response.ok) {
-                        return response.json();
-                    }
-                    return Promise.reject(response);
-                })
-                .then(function (data) {
-                    alert(data.message);
-                    localStorage.setItem("user", JSON.stringify(data.data))
-                    window.location.replace("index.html")
-                }).catch(function (error) {
-                    console.log(error);
-                });
-        }
-
-        document.querySelector('#loginForm').addEventListener('submit', postRegFormData);
-    </script>
+    <script src="./js/Api_login.js"></script>
 
 </body>
 

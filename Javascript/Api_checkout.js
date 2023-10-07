@@ -26,25 +26,25 @@ function postChckoutFormData(event) {
     };
 
     // Kirim data sebagai JSON
-    fetch('localhost:5001/checkout', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            alert('Proses Checkout Telah Berhasil.');
-            form.reset();
-        } else {
-            alert('Maaf, terjadi kesalahan. Silakan coba lagi.');
-        }
-    })
-    .catch(error => console.error('Error sending checkout data:', error));
+    fetch("http://localhost:5001/checkout", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Proses Checkout Telah Berhasil.');
+                form.reset();
+            } else {
+                alert('Maaf, terjadi kesalahan. Silakan coba lagi.');
+            }
+        })
+        .catch(error => console.error('Error sending checkout data:', error));
 }
 
 
 // Event listener untuk form submission
-document.querySelector('.checkoutForm form').addEventListener('submit', postChckoutFormData);
+document.querySelector('#checkoutForm').addEventListener('submit', postChckoutFormData);

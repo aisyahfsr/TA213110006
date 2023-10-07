@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="./CSS/Style-Checkout.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
     <div class="wrapper" id="checkoutContainer">
         <form action="" id="checkoutForm">
@@ -38,22 +40,22 @@
             </div>
             <div class="input-box">
                 <label for="Payment">Choose payment method: </label>
-                <select id="Payment" name="Payment" name="payment" required >
-                <option>BCA</option>
-                <option>BNI</option>
-                <option>BRI</option>
-                <option>DANA</option>
-                <option>Gopay</option>
+                <select id="Payment" name="Payment" name="payment" required>
+                    <option>BCA</option>
+                    <option>BNI</option>
+                    <option>BRI</option>
+                    <option>DANA</option>
+                    <option>Gopay</option>
                 </select>
             </div>
             <div class="input-box">
                 <label for="Shipping">Choose Shipping method: </label>
                 <select id="Shipping" name="Shipping" name="Shipping" required>
-                <option>JNT</option>
-                <option>JNE</option>
-                <option>Ninja Express</option>
-                <option>Antaraja</option>
-                <option>Pos Indonesia</option>
+                    <option>JNT</option>
+                    <option>JNE</option>
+                    <option>Ninja Express</option>
+                    <option>Antaraja</option>
+                    <option>Pos Indonesia</option>
                 </select>
             </div>
             <button type="submit" class="btn">Checkout</button>
@@ -82,7 +84,7 @@
 
             // Handle form submission
             const checkoutForm = document.getElementById('checkoutForm');
-            checkoutForm.addEventListener('submit', function(event) {
+            checkoutForm.addEventListener('submit', function (event) {
                 event.preventDefault();
                 // Handle form submission, e.g., send data to server
                 console.log('Form submitted:', productData);
@@ -91,4 +93,5 @@
     </script>
     <script src="./Javascript/Api_checkout.js"></script>
 </body>
+
 </html>

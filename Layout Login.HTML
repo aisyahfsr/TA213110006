@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
@@ -8,12 +9,13 @@
     <link rel="stylesheet" href="./CSS/Style-log.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
+
 <body>
     <div class="wrapper">
         <form action="" id="loginForm">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" name="Username" placeholder="Username" required>
+                <input type="text" name="username" placeholder="username" required>
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="input-box">
@@ -33,29 +35,28 @@
             </div>
         </form>
     </div>
-    
+
     <script>
-    function postRegFormData(event) {
-    event.preventDefault();
-        
-    // Ambil data dari form
-    
-     const form = event.target;
-    const username = form.querySelector('[name="username"]').value;
-    const password = form.querySelector('[name="password"]').value;
+        function postRegFormData(event) {
+            event.preventDefault();
 
-    // Buat objek data
-    const data = {
-        user_name: username,
-        password: password
-    }
+            // Ambil data dari form
+            const form = event.target;
+            const username = form.querySelector('[name="username"]').value;
+            const password = form.querySelector('[name="password"]').value;
 
-            fetch("http://localhost:5001/login",{
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(data),
+            // Buat objek data
+            const data = {
+                user_name: username,
+                password: password
+            }
+
+            fetch("http://localhost:5001/login", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(data),
                 })
                 .then(function (response) {
                     if (response.ok) {
@@ -64,16 +65,17 @@
                     return Promise.reject(response);
                 })
                 .then(function (data) {
-                alert(data.message);
-                localStorage.setItem("user", JSON.stringify(data.data))
-                window.location.replace("index.html")
-            }).catch(function (error) {
-                console.log(error);
-            });
+                    alert(data.message);
+                    localStorage.setItem("user", JSON.stringify(data.data))
+                    window.location.replace("index.html")
+                }).catch(function (error) {
+                    console.log(error);
+                });
         }
 
-        document.querySelector('.loginForm form').addEventListener('submit', postRegFormData);
+        document.querySelector('#loginForm').addEventListener('submit', postRegFormData);
     </script>
 
 </body>
+
 </html>

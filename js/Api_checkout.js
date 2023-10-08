@@ -66,7 +66,9 @@ function postChckoutFormData(event) {
             console.log(data);
             if (data.success) {
                 alert('Proses Checkout Telah Berhasil.');
-                form.reset();
+                form.reset(); {
+                    window.location.href = 'index.html'
+                }
             } else {
                 alert('Maaf, terjadi kesalahan. Silakan coba lagi.');
             }

@@ -62,35 +62,6 @@
         </form>
     </div>
 
-    <script>
-        (function () {
-            const ls = localStorage.getItem('user')
-            if (ls === null) {
-                if (confirm('Anda belum login!')) {
-                    window.location.href = 'Layout%20Login.HTML'
-                }
-            }
-            const data = JSON.parse(ls)
-            // var nama = document.getElementById("nama").innerHTML = "Halo, " + data.username
-            // var saldo = document.getElementById("saldo").innerHTML = "Saldo anda: " + data.balance
-
-            // Retrieve product data from local storage
-            const productData = JSON.parse(localStorage.getItem('productData'));
-            console.log(`product Data ${productData}`);
-
-            // Populate product name and price in the form
-            document.getElementById('productName').value = productData.name;
-            document.getElementById('productPrice').value = productData.price;
-
-            // Handle form submission
-            const checkoutForm = document.getElementById('checkoutForm');
-            checkoutForm.addEventListener('submit', function (event) {
-                event.preventDefault();
-                // Handle form submission, e.g., send data to server
-                console.log('Form submitted:', productData);
-            });
-        })();
-    </script>
     <script src="./js/Api_checkout.js"></script>
 </body>
 

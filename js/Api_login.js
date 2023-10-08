@@ -12,7 +12,7 @@ function postRegFormData(event) {
         password: password
     }
 
-    fetch("http://localhost:5001/login", {
+    fetch("https://be-jayapura-5-production.up.railway.app/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

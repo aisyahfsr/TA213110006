@@ -2,73 +2,73 @@ const productData = [{
     id: "product1",
     itemSrc: "./Image/Accessories/A1.jpeg",
     name: "Pentagon Bracelet Set",
-    price: "Rp 290.000"
+    price: 290000
   },
   {
     id: "product2",
     itemSrc: "./Image/Accessories/A2.jpeg",
     name: "Simple pearl Bracelet",
-    price: "Rp 260.000"
+    price: 260000
   },
   {
     id: "product3",
     itemSrc: "./Image/Accessories/A3.jpeg",
     name: "Hera Ring",
-    price: "Rp 300.000"
+    price: 300000
   },
   {
     id: "product4",
     itemSrc: "./Image/Accessories/A4.jpeg",
     name: "Tear Drop Necklace",
-    price: "Rp 360.000"
+    price: 360000
   },
   {
     id: "product5",
     itemSrc: "./Image/Accessories/A5.jpeg",
     name: "Siren Pearls Necklace",
-    price: "Rp 400.000"
+    price: 400000
   },
   {
     id: "product6",
     itemSrc: "./Image/Accessories/A6.jpeg",
     name: "Milky way Jewelry Set",
-    price: "Rp 480.000"
+    price: 480000
   },
   {
     id: "product7",
     itemSrc: "./Image/Accessories/A7.jpeg",
     name: "Rose pendant Necklace",
-    price: "Rp 355.000"
+    price: 355000
   },
   {
     id: "product8",
     itemSrc: "./Image/Accessories/A8.jpeg",
     name: "Double Knot Bracelet",
-    price: "Rp 320.000"
+    price: 320000
   },
   {
     id: "product9",
     itemSrc: "./Image/Accessories/A9.jpeg",
     name: "Vintage Brown Belt",
-    price: "Rp 185.000"
+    price: 185000
   },
   {
     id: "product10",
     itemSrc: "./Image/Accessories/A10.jpeg",
     name: "Brownie Ring belt",
-    price: "Rp 130.000"
+    price: 130000
   },
   {
     id: "product11",
     itemSrc: "./Image/Accessories/A11.jpeg",
     name: "Vienna Belt",
-    price: "Rp 150.000"
+    price: 150000
   },
   {
     id: "product12",
     itemSrc: "./Image/Accessories/A12.jpeg",
     name: "Medusa Black Belt",
-    price: "Rp 150.000"
+    price: 150000
   }
 ];
 
@@ -96,7 +96,7 @@ productData.forEach(product => {
         </div>
         <div class="price">
             <h4>${product.name}</h4>
-            <p>${product.price}</p>
+            <p>Rp ${product.price}</p>
             <button class="btn-co" onclick="redirectToCheckout('${product.id}')">Buy</button>
         </div>
     `;

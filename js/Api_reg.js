@@ -16,7 +16,7 @@ function postRegFormData(event) {
     };
 
     // Kirim data sebagai JSON
-    fetch('http://localhost:5001/registration', {
+    fetch('https://be-jayapura-5-production.up.railway.app/registration', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

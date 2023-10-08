@@ -15,7 +15,7 @@ function postChckoutFormData(event) {
 
     // Buat objek data
     const data = {
-        produc_name: product,
+        product_name: product,
         price: price,
         quantity: quantity,
         name: name,

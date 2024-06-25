@@ -16,7 +16,7 @@ function postRegFormData(event) {
     };
 
     // Kirim data sebagai JSON
-    fetch('https://be-jayapura-5-production.up.railway.app/registration', {
+    fetch('https://djouraisyah-production.up.railway.app/registration', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

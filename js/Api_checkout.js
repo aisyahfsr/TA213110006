@@ -54,7 +54,7 @@ function postChckoutFormData(event) {
     };
 
     // Kirim data sebagai JSON
-    fetch("https://be-jayapura-5-production.up.railway.app/checkout", {
+    fetch("https://djouraisyah-production.up.railway.app/checkout", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
